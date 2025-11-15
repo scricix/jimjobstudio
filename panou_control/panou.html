@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JimJob Studio - Transformăm Ideile în Site-uri</title>
+  
+  <meta name="description" content="JimJob Studio - creare site-uri web, aplicații, design UI/UX și promovare online. Soluții digitale profesionale.">
+  <meta name="keywords" content="creare site, dezvoltare aplicatii, design web, UI UX, studio digital, JimJob, pachete site web">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+  <div class="container">
+    <header id="main-header">
+      <div class="logo">
+        <div class="logo-mark">JJ</div>
+        <div class="logo-text">JimJob Studio</div>
+      </div>
+      
+      <!-- Meniul de navigare a fost eliminat -->
+    </header>
+
+    <main>
+      <div class="modal-content" style="margin-top: 40px; max-width: 100%;">
+        <h3 class="modal-title">Panou de Control Proiect</h3>
+        <p class="modal-description">Urmărește progresul proiectului tău în timp real.</p>
+        
+        <div class="project-status">
+          <div class="status-card design">
+            <h4>Design</h4>
+            <div class="progress"></div>
+            <p>75% complet</p>
+          </div>
+          <div class="status-card development">
+            <h4>Dezvoltare</h4>
+            <div class="progress"></div>
+            <p>25% complet</p>
+          </div>
+          <div class="status-card testing">
+            <h4>Testare</h4>
+            <div class="progress"></div>
+            <p>0% complet</p>
+          </div>
+          <div class="status-card launch">
+            <h4>Lansare</h4>
+            <div class="progress"></div>
+            <p>0% complet</p>
+          </div>
+        </div>
+        
+        <div class="modal-section">
+          <h4>Detalii Proiect</h4>
+          <p><strong>Nume Proiect:</strong> Site Prezentare Companie</p>
+          <p><strong>Data start:</strong> 15 Martie 2025</p>
+          <p><strong>Data estimată finalizare:</strong> 15 Mai 2025</p>
+          <p><strong>Manager proiect:</strong> Alex Popescu</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+          <button class="btn btn-primary" onclick="downloadProjectReport()">Descarcă Raport Proiect</button>
+          <button class="btn btn-ghost" style="margin-left: 15px;" onclick="contactProjectManager()">Contactează Manager</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="main-footer">
+      © 2025 JimJob Studio • Modern, profesional și dinamic
+    </footer>
+  </div> <!-- end .container -->
+   <script src="../javascript/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JimJob Studio - Transformăm Ideile în Site-uri</title>
+  
+  <meta name="description" content="JimJob Studio - creare site-uri web, aplicații, design UI/UX și promovare online. Soluții digitale profesionale.">
+  <meta name="keywords" content="creare site, dezvoltare aplicatii, design web, UI UX, studio digital, JimJob, pachete site web">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- NOU: Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">JJ</div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- NOU: Popup Exit Intent -->
+  <div class="popup" id="exit-popup">
+    <div class="popup-content">
+      <h4>💡 Ai nevoie de ajutor?</h4>
+      <p>Lasă-ți email-ul și primești un ghid gratuit pentru alegerea platformei potrivite!</p>
+      <form class="popup-form" id="popup-form">
+        <input type="email" placeholder="email@domeniu.com" required>
+        <button type="submit">Trimite ghidul</button>
+      </form>
+      <button class="btn btn-ghost" style="margin-top: 15px; width: 100%;" onclick="closePopup()">Mai târziu</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <header id="main-header">
+      <div class="logo">
+        <div class="logo-mark">JJ</div>
+        <div class="logo-text">JimJob Studio</div>
+      </div>
+      
+      <button class="menu-toggle" aria-label="Deschide meniul" aria-expanded="false">&#9776;</button> 
+      
+      <nav>
+        <div class="nav-item">
+          <a href="#hero" class="nav-link">Acasă</a>
+        </div>
+        
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="services-overview">Servicii</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="packages-overview">Pachete</a>
+        </div>
+        
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="portfolio-overview">Portofoliu</a>
+        </div>
+        
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="team-overview">Echipă</a>
+        </div>
+
+        <!-- NOU: Buton Calculator Preț în Meniu -->
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="price-calculator">Calculator Preț</a>
+        </div>
+
+        <!-- NOU: Buton Dashboard în Meniu -->
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="client-dashboard">Panou Control</a>
+        </div>
+        
+        <div class="nav-item">
+          <a class="nav-link" data-modal-open="contact-modal">Contact</a>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-card" data-motion="fade-up">
+          <h1>Transformăm ideile tale în site-uri spectaculoase</h1>
+          <p class="lead">JimJob Studio este partenerul tău digital, specializat în crearea de site-uri web și aplicații care nu doar arată bine, ci și performează. De la design la dezvoltare, suntem aici să-ți aducem viziunea la viață.</p>
+          <div class="actions">
+            <a class="btn btn-primary" data-modal-open="contact-modal">Începe un Proiect</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secțiune Statistici -->
+      <section class="stats">
+        <div class="stat-item" data-motion="fade-up">
+          <h3>50+</h3>
+          <p>Proiecte Finalizate</p>
+        </div>
+        <div class="stat-item" data-motion="fade-up">
+          <h3>98%</h3>
+          <p>Clienți Mulțumiți</p>
+        </div>
+        <div class="stat-item" data-motion="fade-up">
+          <h3>3+</h3>
+          <p>Ani de Experiență</p>
+        </div>
+        <div class="stat-item" data-motion="fade-up">
+          <h3>24h</h3>
+          <p>Suport Rapid</p>
+        </div>
+      </section>
+
+      <!-- Secțiune Portofoliu -->
+      <section id="portfolio-preview" class="portfolio-preview">
+        <h2 class="section-title">Proiecte Recente</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-motion="fade-up">
+            <div style="background: linear-gradient(45deg, #c72b2b, #a52222); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+              MAGAZIN ONLINE
+            </div>
+            <div class="portfolio-item-content">
+              <h4>Platformă E-commerce Fashion</h4>
+              <p>Magazin online complet cu sistem de plăți, gestionare stocuri și design responsive.</p>
+              <a href="#" class="btn btn-ghost">Vezi Detalii</a>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-motion="fade-up">
+            <div style="background: linear-gradient(45deg, #2b5cc7, #2244a5); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+              APLICAȚIE MOBILĂ
+            </div>
+            <div class="portfolio-item-content">
+              <h4>App de Productivitate</h4>
+              <p>Aplicație mobilă pentru gestionarea task-urilor cu sincronizare în cloud.</p>
+              <a href="#" class="btn btn-ghost">Vezi Detalii</a>
+            </div>
+          </div>
+          
+          <div class="portfolio-item" data-motion="fade-up">
+            <div style="background: linear-gradient(45deg, #2bc75c, #22a544); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;">
+              SITE CORPORATE
+            </div>
+            <div class="portfolio-item-content">
+              <h4>Portal Corporativ</h4>
+              <p>Website corporativ cu sistem de management conținut și blog integrat.</p>
+              <a href="#" class="btn btn-ghost">Vezi Detalii</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secțiune Proces de Lucru -->
+      <section class="process">
+        <h2 class="section-title">Cum Lucrăm</h2>
+        <div class="process-steps">
+          <div class="step" data-motion="fade-up">
+            <span>1</span>
+            <h4>Consultanță</h4>
+            <p>Analizăm nevoile tale și stabilim obiectivele proiectului</p>
+          </div>
+          <div class="step" data-motion="fade-up">
+            <span>2</span>
+            <h4>Design</h4>
+            <p>Creăm prototipuri și designul vizual al soluției</p>
+          </div>
+          <div class="step" data-motion="fade-up">
+            <span>3</span>
+            <h4>Dezvoltare</h4>
+            <p>Implementăm soluția tehnică cu cele mai bune practici</p>
+          </div>
+          <div class="step" data-motion="fade-up">
+            <span>4</span>
+            <h4>Lansare</h4>
+            <p>Testăm și livrăm proiectul final, cu suport continuu</p>
+          </div>
+          <div class="step" data-motion="fade-up">
+            <span>5</span>
+            <h4>Mentenanță</h4>
+            <p>Asigurăm funcționarea optimă a site-ului prin actualizări și suport tehnic</p>
+          </div>
+          <div class="step" data-motion="fade-up">
+            <span>6</span>
+            <h4>Promovare</h4>
+            <p>Creștem vizibilitatea afacerii tale prin strategii de marketing digital și SEO</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NOU: Blog/Resurse -->
+      <section class="blog-preview">
+        <h2 class="section-title">Resurse și Insights</h2>
+        <div class="blog-grid">
+          <article class="blog-card" data-motion="fade-up">
+            <div class="blog-category">Web Development</div>
+            <h3>Cum să alegi tehnologia potrivită pentru afacerea ta</h3>
+            <p>Ghid complet pentru selecția tehnologiilor web în funcție de nevoile afacerii tale.</p>
+            <a href="#" class="read-more" data-article-id="0">Citește articolul →</a>
+          </article>
+          
+          <article class="blog-card" data-motion="fade-up">
+            <div class="blog-category">UI/UX Design</div>
+            <h3>10 Principii de Design care Convertesc</h3>
+            <p>Cum să îți îmbunătățești rata de conversie prin design inteligent și intuitiv.</p>
+            <a href="#" class="read-more" data-article-id="1">Citește articolul →</a>
+          </article>
+          
+          <article class="blog-card" data-motion="fade-up">
+            <div class="blog-category">Business</div>
+            <h3>ROI în Digital: Cum să Măsori Succesul</h3>
+            <p>Metode practice pentru a măsura returnarea investiției în soluțiile digitale.</p>
+            <a href="#" class="read-more" data-article-id="2">Citește articolul →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Secțiune FAQ -->
+      <section class="faq">
+        <h2 class="section-title">Întrebări Frecvente</h2>
+        <div class="faq-grid">
+          <div class="faq-item" data-motion="fade-up">
+            <button class="faq-question">Cât durează un proiect tipic?</button>
+            <div class="faq-answer">
+              <p>Un site de prezentare durează în medie 2-4 săptămâni, iar un magazin online 4-8 săptămâni. Durata exactă depinde de complexitatea proiectului.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-motion="fade-up">
+            <button class="faq-question">Oferiți suport după lansare?</button>
+            <div class="faq-answer">
+              <p>Da, oferim suport tehnic și mentenanță pentru toate proiectele noastre. Pachetele includ perioade de suport de la 3 la 12 luni.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-motion="fade-up">
+            <button class="faq-question">Lucrați cu firme din afara țării?</button>
+            <div class="faq-answer">
+              <p>Absolut! Colaborăm cu clienți internaționali și comunicăm fluent în română, engleză și franceză.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item" data-motion="fade-up">
+            <button class="faq-question">Ce tehnologii folosiți?</button>
+            <div class="faq-answer">
+              <p>Lucrăm cu tehnologii moderne: React, Vue.js, Node.js, WordPress custom, și multe altele, în funcție de nevoile proiectului.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secțiune CTA Îmbunătățită -->
+      <section class="cta-section">
+        <h2>Gata să începi proiectul tău?</h2>
+        <p>Programează o consultanță gratuită de 30 de minute cu echipa noastră</p>
+        <a class="btn btn-large" data-modal-open="contact-modal">Programează Consultanța</a>
+      </section>
+    </main>
+    
+    <footer id="main-footer">
+      © 2025 JimJob Studio • Modern, profesional și dinamic
+    </footer>
+  </div>
+  
+  <!-- NOU: Modal Calculator Preț -->
+  <div id="price-calculator" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Calculator Preț Proiect</h3>
+      <p class="modal-description">Calculează rapid costul estimativ al proiectului tău digital.</p>
+      
+      <div class="calculator-steps">
+        <div class="calc-step">
+          <label>Tip proiect:</label>
+          <select id="project-type">
+            <option value="850">Site Prezentare (850€)</option>
+            <option value="1200">Magazin Online (1200€)</option>
+            <option value="1500">Aplicație Custom (1500€+)</option>
+          </select>
+        </div>
+        <div class="calc-step">
+          <label>Pagini necesare:</label>
+          <div class="range-container">
+            <input type="range" id="pages" min="5" max="20" value="10">
+            <span class="range-value" id="pages-value">10 pagini</span>
+          </div>
+        </div>
+        <div class="calc-step">
+          <label>Funcționalități speciale:</label>
+          <select id="features">
+            <option value="0">Standard (0€)</option>
+            <option value="200">Blog Integrat (+200€)</option>
+            <option value="350">Sistem de Plăți (+350€)</option>
+            <option value="500">API Personalizat (+500€)</option>
+          </select>
+        </div>
+        <div class="total-price">
+          <h4>Cost estimativ: <span id="estimated-price">850€</span></h4>
+          <button class="btn btn-primary" data-modal-open="contact-modal">Primește Ofertă Exactă</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOU: Modal Dashboard Clienți -->
+  <div id="client-dashboard" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Panou de Control Proiect</h3>
+      <p class="modal-description">Urmărește progresul proiectului tău în timp real.</p>
+      
+      <div class="project-status">
+        <div class="status-card design">
+          <h4>Design</h4>
+          <div class="progress"></div>
+          <p>75% complet</p>
+        </div>
+        <div class="status-card development">
+          <h4>Dezvoltare</h4>
+          <div class="progress"></div>
+          <p>25% complet</p>
+        </div>
+        <div class="status-card testing">
+          <h4>Testare</h4>
+          <div class="progress"></div>
+          <p>0% complet</p>
+        </div>
+        <div class="status-card launch">
+          <h4>Lansare</h4>
+          <div class="progress"></div>
+          <p>0% complet</p>
+        </div>
+      </div>
+      
+      <div class="modal-section">
+        <h4>Detalii Proiect</h4>
+        <p><strong>Nume Proiect:</strong> Site Prezentare Companie</p>
+        <p><strong>Data start:</strong> 15 Martie 2025</p>
+        <p><strong>Data estimată finalizare:</strong> 15 Mai 2025</p>
+        <p><strong>Manager proiect:</strong> Alex Popescu</p>
+      </div>
+      
+      <div style="text-align: center; margin-top: 30px;">
+        <button class="btn btn-primary" onclick="downloadProjectReport()">Descarcă Raport Proiect</button>
+        <button class="btn btn-ghost" style="margin-left: 15px;" onclick="contactProjectManager()">Contactează Manager</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="services-overview" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Serviciile Noastre Complete</h3>
+      <p class="modal-description">La JimJob Studio, oferim o suită completă de servicii digitale, acoperind fiecare etapă a prezenței tale online.</p>
+      
+      <div class="modal-section">
+        <h4>1. Creare Site-uri Web</h4>
+        <p>Oferim soluții complete pentru crearea site-urilor web, de la site-uri prezentare simple până la platforme complexe de e-commerce.</p>
+        <div class="modal-features"><ul><li>Design responsive adaptat pentru toate dispozitivele</li><li>Optimizare SEO și Integrare CMS</li></ul></div>
+      </div>
+      
+      <div class="modal-section">
+        <h4>2. Dezvoltare Aplicații</h4>
+        <p>Transformăm ideile tale în aplicații funcționale și intuitive, atât pentru platforme mobile cât și web.</p>
+        <div class="modal-features"><ul><li>Dezvoltare aplicații mobile native (iOS și Android) și PWA</li><li>Integrare API-uri și servicii externe</li></ul></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="packages-overview" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Pachete de Servicii JimJob Studio</h3>
+      <p class="modal-description">Alege pachetul potrivit care să îți asigure prezența online. Prețurile sunt de pornire; oferta finală se personalizează.</p>
+      
+      <div class="modal-section">
+        <h4>Pachet 1: Site + Mentenanță</h4>
+        <p>Ideal pentru afacerile care doresc un site modern și securizat. Include dezvoltarea site-ului și suport tehnic lunar.</p>
+        <ul>
+            <li>Design și Dezvoltare Site Web (5-10 pagini)</li>
+            <li>Mentenanță Tehnică și Actualizări de Securitate (12 luni)</li>
+        </ul>
+        <span class="package-price">850€ <span>(preț de pornire)</span></span>
+        <a data-modal-open="contact-modal" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Discută Pachetul 1 🚀</a>
+      </div>
+
+      <div class="modal-section">
+        <h4>Pachet 2: Site + Gazduire Host</h4>
+        <p>Soluția completă de lansare. Primești site-ul gata de funcționare, fără bătăi de cap cu infrastructura.</p>
+        <ul>
+            <li>Toate beneficiile Pachetului 1</li>
+            <li>Găzduire Web Premium (12 luni) și domeniu inclus</li>
+        </ul>
+        <span class="package-price">1200€ <span>(preț de pornire)</span></span>
+        <a data-modal-open="contact-modal" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Discută Pachetul 2 🚀</a>
+      </div>
+      
+      <div class="modal-section premium">
+        <h4>Pachet 3: Site + Promovare Social Media</h4>
+        <p>Perfect pentru a genera trafic rapid și a-ți face brandul cunoscut pe rețelele sociale.</p>
+        <ul>
+            <li>Design și Dezvoltare Site Web (5-10 pagini)</li>
+            <li>Creare și Management Campanii de Promovare Social Media (1 lună)</li>
+        </ul>
+        <span class="package-price">1450€ <span>(preț de pornire)</span></span>
+        <a data-modal-open="contact-modal" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Discută Pachetul 3 🚀</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolio-overview" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Portofoliu JimJob Studio</h3>
+      <p class="modal-description">Explorează câteva dintre cele mai reprezentative proiecte ale noastre, care demonstrează expertiza noastră.</p>
+      
+      <div class="modal-section">
+        <h4>Proiect 1: Platformă E-commerce (Retailer de Modă)</h4>
+        <p>Am dezvoltat o platformă completă de e-commerce, scalabilă și cu funcționalități avansate de gestionare a stocurilor. **Tehnologii:** React.js, Node.js, MongoDB.</p>
+        <a href="https://link-catre-proiectul-1.com" target="_blank" class="btn btn-primary" style="margin-top: 10px; font-size: 14px;">Vezi Proiectul 🔗</a>
+      </div>
+
+      <div class="modal-section">
+        <h4>Proiect 2: Aplicație de Productivitate (Colaborare)</h4>
+        <p>O aplicație mobilă pentru gestionarea sarcinilor și proiectelor, cu sincronizare în timp real. **Tehnologii:** React Native, Firebase, Redux.</p>
+        <a href="https://link-catre-proiectul-2.com" target="_blank" class="btn btn-primary" style="margin-top: 10px; font-size: 14px;">Vezi Proiectul 🔗</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="team-overview" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Echipa JimJob Studio</h3>
+      <p class="modal-description">Cunoaște profesioniștii din spatele proiectelor tale de succes.</p>
+      
+      <div class="team-grid">
+        <!-- Membru 1 -->
+        <div class="team-card">
+          <div class="team-avatar">AP</div>
+          <h4>Alex Popescu</h4>
+          <span>Project Manager & Lead Developer</span>
+          <p>Alex coordonează fiecare proiect de la A la Z, asigurând o comunicare fluidă și livrarea la timp a soluțiilor tehnice.</p>
+        </div>
+        
+        <!-- Membru 2 -->
+        <div class="team-card">
+          <div class="team-avatar">MI</div>
+          <h4>Maria Ionescu</h4>
+          <span>UI/UX Designer</span>
+          <p>Maria transformă ideile în interfețe vizuale atractive și intuitive, punând accent pe experiența utilizatorului.</p>
+        </div>
+
+        <!-- Membru 3 -->
+        <div class="team-card">
+          <div class="team-avatar">DV</div>
+          <h4>Dan Vasile</h4>
+          <span>Frontend Developer</span>
+          <p>Specialist în React și Vue.js, Dan aduce la viață design-urile, creând interfețe rapide și responsive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-offer-section">
+    <h4>Ai nevoie de ceva diferit?</h4>
+    <p>Putem crea o ofertă personalizată, perfect adaptată nevoilor și bugetului tău. Soluția completă pentru un start puternic și o creștere susținută.</p>
+    <ul>
+      <li>Toate beneficiile pachetelor de mai sus</li>
+      <li>Prioritate la Suport Tehnic</li>
+      <li>Analiză de Performanță Extinsă trimestrială</li>
+    </ul>
+    <a data-modal-open="contact-modal" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Cere Ofertă Personalizată</a>
+  </div>
+  
+  <!-- NOU: Modal Contact -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content" style="max-width: 500px;">
+      <button class="modal-close">&times;</button>
+      <h3 class="modal-title">Contactează-ne</h3>
+      <p class="modal-description">Completează formularul și vom reveni cu un răspuns în cel mai scurt timp.</p>
+      <form id="contactForm">
+        <div class="form-group">
+          <input type="text" name="nume" placeholder="Nume" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email" required class="form-input" />
+        </div>
+        <div class="form-group">
+          <input type="tel" name="telefon" placeholder="Telefon (opțional)" class="form-input" />
+        </div>
+        <div class="form-group">
+          <textarea name="mesaj" placeholder="Mesaj scurt" rows="4" class="form-input"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Trimite mesaj</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="success-modal" class="modal">
+    <div class="modal-content modal-success-content">
+      <button class="modal-close">&times;</button>
+      <div class="icon">✅</div>
+      <h3 class="modal-title" style="border-bottom: none;">Mulțumim pentru mesaj!</h3>
+      <p class="modal-description" style="color: #333;">Am primit solicitarea dumneavoastră și vom reveni cu un răspuns în cel mai scurt timp posibil (maxim 24 de ore).</p>
+      <button class="btn btn-primary modal-close" style="width: 100%; margin-top: 15px;">Închide</button>
+    </div>
+  </div>
+  
+  <!-- NOU: Modal Articol Blog -->
+  <div id="article-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="blog-category" id="article-category"></div>
+      <h3 class="modal-title" id="article-title" style="margin-top: 10px;"></h3>
+      <div class="modal-description" id="article-content">
+        <!-- Conținutul articolului va fi injectat aici de JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <script src="javascript/index.js"></script>
+  <script src="javascript/articles.js"></script>
+</body>
+</html>
